@@ -16,6 +16,7 @@ public class TestDocsPage extends TestRunner{
 		DocsPage pg=new DocsPage(driver);
 		pg.goToUrl();
 		assertEquals(driver.getTitle(), pg.getDocsTitle());
+		//Take Snapshot for visual testing
 		percy.snapshot("Docs Page Test",Arrays.asList(new Integer[]{375, 480, 720, 1280, 1440, 1920}));
 	}
 }
